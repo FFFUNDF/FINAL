@@ -1,0 +1,136 @@
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+header {
+  background-color: #005baa;
+  color: #fff;
+  padding: 0.5rem 0;
+  text-align: center;
+}
+
+.navbar {
+  display: flex; /* Define o contêiner como um flexbox */
+  justify-content: center; /* Centraliza os itens */
+}
+
+.nav {
+  display: flex;
+  justify-content: space-around; /* Espaça os itens igualmente */
+  padding: 0;
+  margin: 0;
+  list-style: none; /* Remove os marcadores de lista */
+}
+
+.nav-item {
+  margin: 1%; /* Adiciona margem entre os itens */
+  font-weight: bold; /* Texto em negrito */
+  font-size: 1vw; /* Tamanho da fonte */
+ }
+
+ .nav-link {
+  text-decoration: none; /* Remove o sublinhado dos links */
+  color: #ffa500; /* Define a cor do texto */
+}
+
+main {
+  padding: 2rem;
+}
+
+section {
+  margin-bottom: 2rem;
+}
+
+footer {
+  background-color: #005baa;
+  color: #fff;
+  text-align: center;
+  padding: 1rem 0;
+  position: fixed;
+  width: 100%;
+  max-height:50px;
+  bottom: 10px;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 2rem;
+}
+
+.member {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 2rem;
+  margin: 2rem;
+  text-align: center;
+  width: 300px; /* Ajuste a largura para acomodar as imagens */
+}
+
+.iframe-arredondado {
+  /* não deu para usar imagem normal, o google não disponibiliza acesso */
+  width: 250px;
+  height: 250px;
+  border-radius: 20px; /* Define o raio da borda */
+  overflow: hidden; /* Garante que o conteúdo dentro do iframe também fique arredondado */
+  border: none; /* Remove a borda padrão do iframe */
+}
+
+.member h3 {
+  margin: 0.5rem 0 0.2rem;
+}
+
+.member p {
+  margin: 0;
+  color: #777;
+}
+
+form {
+  max-width: 600px;
+  margin: 0px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+input[type='text'],
+input[type='email'] {
+  width: 300%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: horizontal;
+}
+
+.custom-btn {
+  background-color: #002bba; /* Cor de fundo */
+  color: white; /* Cor do texto */
+  width: 100%; /* Largura total */
+  padding: 10px; /* Espaçamento interno */
+  margin-top: 5%;
+  margin-bottom: 5%; /* Margem inferior */
+  border: 1px solid #ccc; /* Borda */
+  border-radius: 4px; /* Bordas arredondadas */
+  cursor: pointer; /* Cursor de ponteiro */
+  font-weight: bold; /* Texto em negrito */
+  font-size: 20px; /* Tamanho da fonte */
+}
+
+.custom-btn:hover {
+  background-color: #45a049; /* Cor de fundo ao passar o mouse */
+  content: 'Enviar'; /* Texto ao passar o mouse */
+}
