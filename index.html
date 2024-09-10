@@ -13,10 +13,12 @@
     <style>
      .banner {
         background-image: url('https://thumbs.dreamstime.com/b/bandeira-do-distrito-federal-brasil-cole%C3%A7%C3%A3o-de-banners-ondas-d-estado-ilustra%C3%A7%C3%A3o-231005149.jpg');
-        background-color: #005baa; 
-        max-width: contain; 
-        max-height: 400px;
-        height: 400px;
+        background-size: auto 200px;/* auto para largura e 200px fixa a aultura */
+        background-color: #005baa;/* cor do plano de fundo*/
+        background-position: center;/*Especifica a posição da imagem de fundo (ex. top, bottom, left, right, center)*/
+        max-width: contain;
+        max-height: 200px;
+        height: 200px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -24,9 +26,8 @@
         position: relative; /* or absolute */
         z-index: -2;
       }
-
       .banner img {
-        width: contain; 
+        width: contain;
         height: auto;
         object-fit: contain;
         position: relative; /* or absolute */
@@ -53,8 +54,8 @@
     </style>
   </head>
   <body>
-   <div class="header">
-    <img src="https://www.esporte.df.gov.br/wp-conteudo/uploads/2019/04/Marca-Horizontal.png" alt="Banner Image">
+   <div class="banner">
+    <img src="https://www.esporte.df.gov.br/wp-conteudo/uploads/2019/04/Marca-Horizontal.png" alt="Banner Image" style="max-height: 150px;">
     </div>
     <div class="row" style="background-color: #005baa; color: #fff">
       <ul class="nav" style="display: flex; justify-content: space-around; align-items: center;">
@@ -72,7 +73,7 @@
     </header>
   </body>
 </html>
-<div class="row">
+<div class="container fluid">
         <div class="col-md-12 text-center">
           <br>
           <h1 class="display-4">Administração Regional do Distrito Federal</h1>
@@ -145,4 +146,5 @@
   <p>© 2024 Administgração Regional do Distrito Federal</p>
 </footer>
 </body>
+
 </html>
