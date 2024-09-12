@@ -44,19 +44,21 @@
       text-decoration: none; /* Remove o sublinhado dos links */
       color: #ffa500; /* Define a cor do texto */
     }
-    body {
+    .body {
       background-color: lightgray; /* cor do fundo da página */
+      margin-bottom: 100px;
     }
     .container {
       display: flex;
       flex-wrap: wrap;
-      justify-content: space-around;
+      gap: 20px;
+      justify-content: center;
       padding: 2rem;
     }
     .form-group {
-      max-width: 90%; /* Usar porcentagem para largura máxima */
+      max-width: 80%; /* Usar porcentagem para largura máxima */
       margin: 0 auto;
-      padding: 2em; /* Usar unidades flexíveis para padding */
+      padding: 2rem; /* Usar unidades flexíveis para padding */
       background-color: #fff;
       border-radius: 8px;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -66,13 +68,14 @@
       margin-bottom: 0.5em; /* Usar unidades flexíveis para margem */
       font-weight: bold;
     }
-    input {
+    .input {
       width: 100%;
       padding: 1em; /* Usar unidades flexíveis para padding */
+      margin-left: 1em;
       margin-bottom: 1.5em; /* Usar unidades flexíveis para margem */
       border: 1px solid #ccc;
       border-radius: 4px;
-      box-sizing: border-box; /* Garante que o padding seja incluído na largura total */
+      box-sizing: content-box; /* Garante que o padding seja incluído na largura total */
       font-size: 1rem; /* Usar unidades flexíveis para tamanho da fonte */
       transition: border-color 0.3s ease; /* Adiciona uma transição suave para a borda */
     }
@@ -101,15 +104,17 @@
       color: #fff;
       text-align: center;
       font-size: 12px;
-      position: static;
+      position: fixed; /*usado para fixar o rodapé no fim da pagina, idenpendente do zoom.*/
+      bottom: 0px; /*distância do rodapé para a base da página*/
       width: 100%; /* ajusta a largura para 100% da tela */
-      padding: 1rch; /* cap: Altura da letra maiúscula.
-                       rem: Unidade relativa ao tamanho da fonte do elemento raiz.
-                       ex: Altura da letra “x” minúscula.
-                       rh: Altura da linha.
-                       fr: Fração do espaço disponível no grid layout. */
-      padding-bottom: .5rch;
-    }
+      max-height: fit-content;
+      padding: 1rem; /* cap: Altura da letra maiúscula.
+                         rem: Unidade relativa ao tamanho da fonte do elemento raiz.
+                         ex: Altura da letra “x” minúscula.
+                         rh: Altura da linha.
+                         fr: Fração do espaço disponível no grid layout.o */
+      padding-bottom: 0em
+       }
   </style>
 </head>
 <body class="body">
@@ -131,27 +136,23 @@
 				</ul>
 			</nav>
 		</header>
-    <main>
+    <main class="container mt-5" style="padding: 2rem; flex-grow: 100;">
       <div class="row">
         <div class="col-md-12 text-center">
-          <br>
-          <h1 class="display-4">Administração Regional do Distrito Federal</h1>
+          <h1 class="display-5 fw-bold" style="margin-top: -10px;">Contato</h1>
           <br>
         </div>
       </div>
       <div class="row"> <!-- Added a new row div -->
         <div class="col-md-12 text-center">
           <h2>Entre em contato com a gente!</h2>
-          <br />
-          <h3>Para isso, preencha corretamente os campos abaixo:</h3>
+          <h3>Para isso, preencha corretamente os campos abaixo:</h3><br>
         </div>
-      </div>
-      <div class="row"> <!-- Added a new row div -->
         <div class="col-md-12 text-center">
-          <p class="info">
-            Em breve retornaremos seu contato para o e-mail indicado, portanto tenha
-            certeza de inserir um e-mail válido.
-          </p>
+          <h5 class="info" style="font-weight:bold; color: darkblue; line-height: 1.5;">
+            Em breve retornaremos seu contato para o e-mail indicado,<br><span style="text-decoration-line:underline; color:darkred"> tenha
+            certeza de inserir um e-mail válido.</span>
+          </h5>
         </div>
       </div>
       <form class="col g-3 needs-validation" novalidate>
@@ -160,8 +161,8 @@
           <input
             type="text"
             class="form-control"
-            id="sobrenome"
-            name="sobrenome"
+            id="nome"
+            name="nome"
             required
             pattern="^[a-zA-Z]+$"
             title="Insira apenas letras"
@@ -170,7 +171,7 @@
           <div class="invalid-feedback">
             Por favor, insira um nome válido (apenas letras).
           </div>
-          <div class="col-md-4">
+          <div>
           <label for="sobrenome" class="form-label">Digite seu sobrenome:</label>
           <input
             type="text"
@@ -181,11 +182,12 @@
             pattern="^[a-zA-Z]+$"
             title="Insira apenas letras"
           />
+          </div>
           <div class="valid-feedback">Sobrenome válido!</div>
           <div class="invalid-feedback">
             Por favor, insira um sobrenome válido (apenas letras).
         </div>
-        <div class="col-md-4">
+        <div class="form">
           <label for="email" class="form-label">Digite seu e-mail:</label>
           <input
             type="email"
@@ -209,6 +211,7 @@
             name="mensagem"
             required
             minlength="200"
+            oninput="this.style.height = 'auto'; this.style.height = (this.scrollHeight) + 'px';"
           ></textarea>
           <div class="valid-feedback">Mensagem válida!</div>
           <div class="invalid-feedback">

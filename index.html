@@ -1,187 +1,195 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Principal-RADF</title>
-		<link
-			rel="stylesheet"
-			href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"/>
-		<!-- <link rel="stylesheet" href="styles.css"/> Este seria o CSS local, e foi substituido pelo CDN do Bootstrap:
-		CDN (em inglês: Content Delivery Network ou Content Distribution Network), termo técnico, traduzido literalmente
-		para o português como Rede de fornecimento, entrega e distribuição de conteúdo. -->
-		<style>
-		 .banner {
-				background-image: url('https://thumbs.dreamstime.com/b/bandeira-do-distrito-federal-brasil-cole%C3%A7%C3%A3o-de-banners-ondas-d-estado-ilustra%C3%A7%C3%A3o-231005149.jpg');
-				background-size: auto 200px;/* auto para largura e 200px fixa a aultura */
-				background-color: #005baa;/* cor do plano de fundo*/
-				background-position: center;/*Especifica a posição da imagem de fundo (ex. top, bottom, left, right, center)*/
-				max-width: contain;
-				max-height: 200px;
-				height: 200px;
-				display: flex;
-				justify-content: center;
-				align-items: center;
-				color: #fff;
-				position: relative; /* or absolute */
-				z-index: -2; /* Altera o plano de apresentação das camadas */
-			}
-			.navbar {
-				display: flex; /* Define o contêiner como um flexbox */
-				justify-content: center; /* Centraliza os itens */
-			}
-			.nav {
-				display: flex;
-				justify-content: space-around; /* Espaça os itens igualmente */
-				padding: 0;
-				margin: 0;
-				list-style: none; /* Remove os marcadores de lista */
-			}
-			.nav-item {
-				margin: 1%; /* Adiciona margem entre os itens */
-				font-weight: bold; /* Texto em negrito */
-				font-size: clamp(1.5em,1em + 2vw, 1.5em) /* Nova função de CSS Ajusta o tamanho da fonte com valor intermediário, sem usar o "VW" o primeiro é o minimo,segundo desejável e o terceiro o tamanho máximo) */
-			}
-			.nav-link {
-				text-decoration: none; /* Remove o sublinhado dos links */
-				color: #ffa500; /* Define a cor do texto */
-			}
-			.body {
-				background-color: lightgray; /* cor do funda da pagina */
-			}
-			.card {
-				margin-bottom: 20px; /* margem inferior das caixas de mensagem*/
-				margin-top: 20px;
-				margin-right:auto;
-				margin-left: auto;
-				position: relative;
-				border: none; /* Bordas das caixas de mensagem*/
-				border-radius: 10px;
-				box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Altera a sombra das caixas de mensagens*/
-				box-sizing: border-box; /* Garante que o padding e a borda sejam incluídos no tamanho total da caixa */
-			}
-			.card-body {
-				padding: 20px;
-			}
-			.card-title {
-				font-size: 20px;
-				font-weight: bold;
-				text-decoration-line:underline;
-				margin-bottom: 10px;
-			}
-			.card-text {
-				font-size: 16px;
-				color: #666;
-				font-weight:absolute;
-				text-align: justify;
-			}
-			.footer {
-  				background-color: #005baa;
-  				color: #fff;
-  				text-align: center;
-				font-size: 12px;
-    			position: static;
-  				width: 100%; /* ajusta a largura para 100% da tela */
-  				padding: 1rch; /* cap: Altura da letra maiúscula.
-								rem: Unidade relativa ao tamanho da fonte do elemento raiz.
-								ex: Altura da letra “x” minúscula.
-								rh: Altura da linha.
-								fr: Fração do espaço disponível no grid layout.o */
-				padding-bottom: .5rch
-  			}
-		</style>
-	</head>
-	<body class="body">
-		<header>
-			<div class="banner">
-				<img src="https://www.esporte.df.gov.br/wp-conteudo/uploads/2019/04/Marca-Horizontal.png" alt="Banner Image" style="max-height: 150px;">
-			</div>
-			<nav class="row" style="background-color: #005baa; color: #fff">
-				<ul class="nav" style="display: flex; justify-content: space-around; align-items: center;">
-					<li class="nav-item active">
-						<a class="nav-link" href="/index.html" aria-current="page">Principal</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="/galeria.html">Galeria</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="/contato.html">Contato</a>
-					</li>
-				</ul>
-			</nav>
-		</header>
-		<main class="container mt-5" style="padding: 2rem; flex-grow: 100;">
-			<div class="container fluid">
-				<div class="col-md-12 text-center">
-					<h1 class="display-5 fw-bold">Administração Regional do Distrito Federal</h1>
-				<br>
-				</div>
-			</div>
-			<section>
-				<h2 class="mt-4 text-dark fw-bold">Notícias</h2>
-				<div class="row">
-					<div class="col-md-6">
-						<div class="card">
-							<div class="card-body">
-								<h5 class="card-title">Novo projeto de infraestrutura é lançado</h5>
-								<p class="card-text">
-									O projeto visa melhorar a infraestrutura da região, incluindo a
-									construção de novas estradas e a melhoria dos serviços públicos.
-								</p>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-6">
-						<div class="card">
-							<div class="card-body">
-								<h5 class="card-title">
-									Administração Regional lança novo programa de apoio à comunidade
-								</h5>
-								<p class="card-text">
-									O programa visa apoiar as famílias mais vulneráveis da região,
-									oferecendo ajuda financeira e assistência social.
-								</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-			<section>
-				<h2 class="mt-4 text-dark fw-bold">Serviços</h2>
-				<div class="row">
-					<div class="col-md-6">
-						<div class="card">
-							<div class="card-body">
-								<h5 class="card-title">Serviço de atendimento ao público</h5>
-								<p class="card-text">
-									Nosso serviço de atendimento ao público está disponível de segunda
-									a sexta-feira, das 9h às 17h. Além do atendimento presencial e
-									telefônico, você também pode nos encontrar nas redes sociais e
-									outros canais digitais para suporte e informações.
-								</p>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-6">
-						<div class="card">
-							<div class="card-body">
-								<h5 class="card-title">Novas parcerias</h5>
-								<p class="card-text">
-									Parceria com UnDF promove o desenvolvimento de capacitações em
-									tecnologia e inovação voltada a população em vulnerabilidade, que
-									conta com o apoio dos empresários da região para estimular a
-									reinserção no mercado de trabalho.
-								</p>
-							</div>
-						</div>
-					</div>
-				</div>
-				<br>
-			</section>
-		</main>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Principal-RADF</title>
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"/>
+        <!-- <link rel="stylesheet" href="styles.css"/> Este seria o CSS local, e foi substituido pelo CDN do Bootstrap:
+        CDN (em inglês: Content Delivery Network ou Content Distribution Network), termo técnico, traduzido literalmente
+        para o português como Rede de fornecimento, entrega e distribuição de conteúdo. -->
+        <style>
+         .banner {
+                background-image: url('https://thumbs.dreamstime.com/b/bandeira-do-distrito-federal-brasil-cole%C3%A7%C3%A3o-de-banners-ondas-d-estado-ilustra%C3%A7%C3%A3o-231005149.jpg');
+                background-size: auto 200px;/* auto para largura e 200px fixa a aultura */
+                background-color: #005baa;/* cor do plano de fundo*/
+                background-position: center;/*Especifica a posição da imagem de fundo (ex. top, bottom, left, right, center)*/
+                max-width: contain;
+                max-height: 200px;
+                height: 200px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: #fff;
+                position: relative; /* or absolute */
+                z-index: -2; /* Altera o plano de apresentação das camadas */
+            }
+            .navbar {
+                display: flex; /* Define o contêiner como um flexbox */
+                justify-content: center; /* Centraliza os itens */
+            }
+            .nav {
+                display: flex;
+                justify-content: space-around; /* Espaça os itens igualmente */
+                padding: 0;
+                margin: 0;
+                list-style: none; /* Remove os marcadores de lista */
+            }
+            .nav-item {
+                margin: 1%; /* Adiciona margem entre os itens */
+                font-weight: bold; /* Texto em negrito */
+                font-size: clamp(1.5em,1em + 2vw, 1.5em) /* Nova função de CSS Ajusta o tamanho da fonte com valor intermediário, sem usar o "VW" o primeiro é o minimo,segundo desejável e o terceiro o tamanho máximo) */
+            }
+            .nav-link {
+                text-decoration: none; /* Remove o sublinhado dos links */
+                color: #ffa500; /* Define a cor do texto */
+            }
+            .body {
+                background-color: lightgray; /* cor do fundo da página */
+                margin-bottom: 100px;
+            }
+            .container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: space-around;
+            padding: 2rem;
+            }
+            .card {
+                margin-bottom: 20px; /* margem inferior das caixas de mensagem*/
+                margin-top: 20px;
+                margin-right:auto;
+                margin-left: auto;
+                position: relative;
+                border: none; /* Bordas das caixas de mensagem*/
+                border-radius: 10px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Altera a sombra das caixas de mensagens*/
+                box-sizing: border-box; /* Garante que o padding e a borda sejam incluídos no tamanho total da caixa */
+            }
+            .card-body {
+                flex: auto;
+            }
+            .card-title {
+                font-size: 20px;
+                font-weight: bold;
+                text-decoration-line:underline;
+            }
+            .card-text {
+                font-size: 16px;
+                color: #666;
+                font-weight:absolute;
+                text-align: justify;
+            }
+            .footer {
+                  background-color: #005baa;
+                  color: #fff;
+                  text-align: center;
+                font-size: 12px;
+                position: fixed; /*usado para fixar o rodapé no fim da pagina, idenpendente do zoom.*/
+                bottom: 0px; /*distância do rodapé para a base da página*/
+                  width: 100%; /* ajusta a largura para 100% da tela */
+                  max-height: fit-content;
+                padding: 1rem; /* cap: Altura da letra maiúscula.
+                                rem: Unidade relativa ao tamanho da fonte do elemento raiz.
+                                ex: Altura da letra “x” minúscula.
+                                rh: Altura da linha.
+                                fr: Fração do espaço disponível no grid layout.o */
+                padding-bottom: 0em
+              }
+        </style>
+    </head>
+    <body class="body">
+        <header>
+            <div class="banner">
+                <img src="https://www.esporte.df.gov.br/wp-conteudo/uploads/2019/04/Marca-Horizontal.png" alt="Banner Image" style="max-height: 150px;">
+            </div>
+            <nav class="row" style="background-color: #005baa; color: #fff">
+                <ul class="nav" style="display: flex; justify-content: space-around; align-items: center;">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/index.html" aria-current="page">Principal</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/galeria.html">Galeria</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/contato.html">Contato</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main class="container mt-5" style="padding: 2rem; flex-grow: 100;">
+            <div class="container fluid">
+                <div class="col-md-12 text-center">
+                    <h1 class="display-5 fw-bold">Administração Regional do Distrito Federal</h1>
+                </div>
+            </div>
+            <section>
+                <h2 class="mt-4 text-dark fw-bold">Notícias</h2>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Novo projeto de infraestrutura é lançado</h5>
+                                <p class="card-text">
+                                    O projeto visa melhorar a infraestrutura da região, incluindo a
+                                    construção de novas estradas e a melhoria dos serviços públicos.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">
+                                    Administração Regional lança novo programa de apoio à comunidade
+                                </h5>
+                                <p class="card-text">
+                                    O programa visa apoiar as famílias mais vulneráveis da região,
+                                    oferecendo ajuda financeira e assistência social.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <h2 class="mt-4 text-dark fw-bold">Serviços</h2>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Serviço de atendimento ao público</h5>
+                                <p class="card-text">
+                                    Nosso serviço de atendimento ao público está disponível de segunda
+                                    a sexta-feira, das 9h às 17h. Além do atendimento presencial e
+                                    telefônico, você também pode nos encontrar nas redes sociais e
+                                    outros canais digitais para suporte e informações.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Novas parcerias</h5>
+                                <p class="card-text">
+                                    Parceria com UnDF promove o desenvolvimento de capacitações em
+                                    tecnologia e inovação voltada a população em vulnerabilidade, que
+                                    conta com o apoio dos empresários da região para estimular a
+                                    reinserção no mercado de trabalho.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+            </section>
+        </main>
 <footer class="footer">
-	<p>© 2024 Administração Regional do Distrito Federal<br><span style="font-weight: bold; color: #ffa500;">MTI502-Raul, setembro de 2024</span><br>
-		<span style="font-weight: bold; color: gold;">Time: Eduardo, Fabrício e Norbeto</span></p>
+    <p>© 2024 Administração Regional do Distrito Federal<br><span style="font-weight: bold; color: #ffa500;">MTI502-Raul, setembro de 2024</span><br>
+        <span style="font-weight: bold; color: gold;">Time: Eduardo, Fabrício e Norbeto</span></p>
 </footer>
 </body>
 </html>
